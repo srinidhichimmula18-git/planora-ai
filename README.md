@@ -1,79 +1,399 @@
-# Planora AI - Intelligent Productivity Companion
+# 🚀 Planora AI – Intelligent Productivity Companion
 
-Planora AI is an intelligent productivity SaaS companion that helps students, professionals, and entrepreneurs plan, prioritize, and execute their tasks before deadlines. Using the power of the **Google Gemini 1.5 Flash API**, Planora AI goes beyond basic to-do lists by analyzing user workloads, generating optimized daily agendas, flagging overdue risks, and scheduling tasks automatically via **natural voice speech**.
-
----
-
-## Key Features
-
-1. **AI Smart Prioritization**: Re-orders your tasks in real-time by weighing deadline proximity, priority levels, and duration.
-2. **AI Daily Planner**: Creates hour-by-hour schedules starting at 9 AM, automatically inserting stretch breaks and lunch periods.
-3. **AI Deadline Risk Prediction**: Flags tasks likely to miss deadlines, details the risk reason, and suggests a strategic solution.
-4. **AI Weekly Insights**: Highlights peak focus hours, category-specific backlog velocity, and actionable advice to improve efficiency.
-5. **Built-in Voice Assistant**: Speaks naturally to schedule. For example: *"Remind me to complete coding practice tomorrow at 5 PM."* Uses Web Speech recognition and a Gemini NLP parser.
-6. **Interactive Calendar Workspace**: Month, Week, and Day timeline agendas with quick schedule block creation.
-7. **Performance Analytics Dashboard**: Recharts-powered graphs tracking completion velocity, priority density, and unlockable gamified badges.
-8. **Responsive Light & Dark Modes**: Modern glassmorphic interfaces designed for desktop, tablet, and mobile screens.
+Planora AI is an AI-powered productivity platform that helps students, professionals, and entrepreneurs plan, prioritize, and accomplish tasks before deadlines. Powered by **Google Gemini 1.5 Flash**, it intelligently analyzes workloads, generates optimized schedules, predicts deadline risks, and assists users through natural language voice commands.
 
 ---
 
-## Dual-Mode System Architecture
+## 🌟 Overview
 
-To guarantee the application is instantly testable out of the box, we implemented a **Dual-Mode System**:
-- **Mock Mode (Default Fallback)**: Runs entirely on local storage databases, simulated auth validation (any email works with a 6-character password), and client-side heuristic engines. Triggered automatically if environment configuration variables are absent.
-- **Production Mode**: Hooks up to live Firebase Authentication, Firestore databases, and the Google Gemini API once environment configuration keys are added.
+Traditional task managers only store tasks—they don't help users decide **what should be done next**.
 
----
+Planora AI solves this problem by combining artificial intelligence with modern productivity tools to help users:
 
-## Tech Stack
-
-- **Frontend**: Next.js 16 (App Router), React 19, Tailwind CSS v4, TypeScript, Recharts, Framer Motion, Canvas Confetti, Firebase Client SDK.
-- **Backend API**: Node.js, Express, TypeScript, Google Generative AI SDK (`@google/generative-ai`), Firebase Admin SDK.
-- **Database / Auth**: Firebase Firestore & Firebase Auth.
+- Prioritize tasks intelligently
+- Create optimized daily schedules
+- Predict deadline risks
+- Analyze productivity patterns
+- Manage work using natural voice commands
 
 ---
 
-## Setup & Running Locally
+# ✨ Features
 
-### Step 1: Install Dependencies
-Run the helper installer script in the root directory. This automatically executes `npm install` in the root, frontend, and backend folders:
+## 🤖 AI Smart Prioritization
+
+Automatically reorders tasks based on:
+
+- Deadline proximity
+- Priority level
+- Estimated duration
+- Current workload
+
+---
+
+## 📅 AI Daily Planner
+
+Creates an optimized day schedule beginning at **9:00 AM**, automatically including:
+
+- Focus sessions
+- Short breaks
+- Lunch breaks
+- Balanced workload distribution
+
+Example:
+
+```
+09:00 AM  Coding Practice
+10:30 AM  AI Assignment
+12:30 PM  Lunch Break
+01:30 PM  Project Development
+03:30 PM  Revision
+```
+
+---
+
+## ⚠️ AI Deadline Risk Prediction
+
+Identifies tasks that are likely to miss deadlines.
+
+Provides:
+
+- Risk Level
+- Reason
+- Suggested Solution
+- Priority Recommendation
+
+---
+
+## 📈 AI Weekly Insights
+
+Displays intelligent analytics including:
+
+- Weekly productivity
+- Peak focus hours
+- Category performance
+- Completion trends
+- Personalized recommendations
+
+---
+
+## 🎤 Voice Assistant
+
+Create tasks naturally using speech.
+
+Example:
+
+> "Remind me to complete coding practice tomorrow at 5 PM."
+
+Uses:
+
+- Web Speech API
+- Google Gemini NLP
+
+---
+
+## 📆 Interactive Calendar
+
+Supports:
+
+- Month View
+- Week View
+- Day View
+- Timeline Scheduling
+- Quick Task Creation
+
+---
+
+## 📊 Analytics Dashboard
+
+Interactive charts built using **Recharts**
+
+Includes:
+
+- Task completion rate
+- Priority distribution
+- Productivity graphs
+- Category statistics
+- Achievement badges
+
+---
+
+## 🌙 Modern UI
+
+- Responsive Design
+- Mobile Friendly
+- Glassmorphism UI
+- Dark Mode
+- Light Mode
+- Smooth Animations
+
+---
+
+# 🏗 Architecture
+
+```
+                  User
+                    │
+                    ▼
+      Next.js Frontend (React)
+                    │
+                    ▼
+        Express.js Backend API
+                    │
+        ┌───────────┴───────────┐
+        ▼                       ▼
+ Google Gemini API       Firebase Services
+                     (Auth & Firestore)
+```
+
+---
+
+# ⚙ Dual Mode Architecture
+
+## Mock Mode
+
+Runs automatically when API keys are unavailable.
+
+Features:
+
+- Local Storage Database
+- Mock Authentication
+- Simulated AI Responses
+- Offline Testing
+
+---
+
+## Production Mode
+
+Runs with:
+
+- Firebase Authentication
+- Firebase Firestore
+- Google Gemini API
+- Live Cloud Database
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- Recharts
+- Canvas Confetti
+
+---
+
+## Backend
+
+- Node.js
+- Express.js
+- TypeScript
+- Google Generative AI SDK
+- Firebase Admin SDK
+
+---
+
+## Database
+
+- Firebase Firestore
+
+---
+
+## Authentication
+
+- Firebase Authentication
+
+---
+
+## Artificial Intelligence
+
+- Google Gemini 1.5 Flash API
+
+---
+
+# ☁ Google Technologies Used
+
+- Google Gemini 1.5 Flash API
+- Google AI Studio
+- Firebase Authentication
+- Firebase Firestore
+- Google Cloud
+
+---
+
+# 📂 Project Structure
+
+```
+Planora-AI
+│
+├── frontend
+│   ├── app
+│   ├── components
+│   ├── hooks
+│   ├── lib
+│   └── public
+│
+├── backend
+│   ├── src
+│   ├── routes
+│   ├── services
+│   └── middleware
+│
+├── package.json
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/srinidhichimmula18-git/planora-ai.git
+
+cd planora-ai
+```
+
+---
+
+## Install Dependencies
+
 ```bash
 npm run install-all
 ```
 
-### Step 2: Set Environment Variables (Optional for Production Mode)
-Create `.env` files in both the `backend/` and `frontend/` subfolders based on the templates:
+---
 
-**Backend (`backend/.env`)**
-```env
-PORT=5000
-GEMINI_API_KEY=your_google_gemini_api_key_here
+## Backend Environment Variables
+
+Create:
+
+```
+backend/.env
 ```
 
-**Frontend (`frontend/.env`)**
 ```env
-NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
-NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-firebase-storage-bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-firebase-sender-id
-NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
-```
-*(If you leave these variables blank, the monorepo boots in Mock Mode automatically).*
+PORT=5001
 
-### Step 3: Run Concurrently
-Boot the Express API server (on port 5000) and the Next.js frontend (on port 3000) concurrently using:
+GEMINI_API_KEY=your_google_gemini_api_key
+```
+
+---
+
+## Frontend Environment Variables
+
+Create:
+
+```
+frontend/.env
+```
+
+```env
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5001
+
+NEXT_PUBLIC_FIREBASE_API_KEY=
+
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+
+NEXT_PUBLIC_FIREBASE_APP_ID=
+```
+
+If environment variables are not provided, Planora AI automatically starts in **Mock Mode**.
+
+---
+
+## Run the Application
+
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open:
+
+```
+http://localhost:3000
+```
 
 ---
 
-## Quick Testing Instructions (Reviewers Guide)
-1. When you load the login screen, click **"Quick Guest Login (Bypass Auth)"** to sign in instantly with a test account.
-2. The dashboard will seed mock tasks representing overdue, critical, and completed statuses.
-3. Click the floating microphone bubble in the bottom right corner. Grant microphone permissions, press the red mic button, and speak: *"Remind me to draft client presentation tomorrow at 5 PM"* or type it in the text box. The voice parser will construct and create a new task.
-4. Click **"AI Prioritize"** or **"AI Generate Schedule"** to see Planora's intelligence optimize your agenda.
+# 🧪 Quick Testing Guide
+
+1. Open the application.
+
+2. Click **Quick Guest Login**.
+
+3. Create a few tasks.
+
+4. Click **AI Prioritize**.
+
+5. Click **Generate Schedule**.
+
+6. Test the Voice Assistant.
+
+7. Explore Calendar.
+
+8. View Analytics Dashboard.
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here.
+
+Suggested screenshots:
+
+- Home Page
+- Dashboard
+- Calendar
+- AI Planner
+- Voice Assistant
+- Analytics
+
+---
+
+# 🔒 Security
+
+- Environment variables protected using `.gitignore`
+- API keys are never committed
+- Firebase Authentication secures users
+- Backend validates incoming requests
+
+---
+
+# 🚀 Future Improvements
+
+- Google Calendar Integration
+- Email Notifications
+- Team Collaboration
+- AI Meeting Scheduler
+- Mobile App
+- Push Notifications
+- Multi-language Support
+
+---
+
+# 👨‍💻 Author
+
+**Srinidhi Chimmula**
+
+GitHub:
+https://github.com/srinidhichimmula18-git
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
