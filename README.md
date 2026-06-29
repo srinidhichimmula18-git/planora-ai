@@ -351,16 +351,15 @@ http://localhost:3000
 
 # 📸 Screenshots
 
-Add screenshots here.
+<p align="center">
+  <img src="assets/screenshots/homepage.png" width="45%">
+  <img src="assets/screenshots/dashboard.png" width="45%">
+</p>
 
-Suggested screenshots:
-
-- Home Page
-- Dashboard
-- Calendar
-- AI Planner
-- Voice Assistant
-- Analytics
+<p align="center">
+  <img src="assets/screenshots/analytics.png" width="45%">
+  <img src="assets/screenshots/calendar.png" width="45%">
+</p>
 
 ---
 
@@ -392,8 +391,3 @@ Suggested screenshots:
 GitHub:
 https://github.com/srinidhichimmula18-git
 
----
-
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
